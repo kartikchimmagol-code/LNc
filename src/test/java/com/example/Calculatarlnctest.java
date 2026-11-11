@@ -1,0 +1,29 @@
+package com.example;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+class Calculatarlnctest {
+
+    @Test
+    void testTotal() {
+        assertEquals(225,
+        		Calculatarlnc.calculateTotal(75, 68, 82));
+    }
+
+    @Test
+    void testAverage() {
+        assertEquals(75.0,
+        		Calculatarlnc.calculateAverage(75, 68, 82));
+    }
+
+    @Test
+    void testPass() {
+        assertTrue(Calculatarlnc.isPass(75.0));
+    }
+
+    @Test
+    void testFail() {
+        assertFalse(Calculatarlnc.isPass(35.0));
+    }
+}
